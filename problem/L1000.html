@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>mod</title>
+        <title>L1000 - PixalOJ</title>
         <!-- MDB icon -->
         <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
         <!-- Font Awesome -->
@@ -21,7 +21,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         />
         <!-- Dark MDB theme -->
-        <link rel="stylesheet" href="css/mdb.dark.min.css" />
+        <link rel="stylesheet" href="css/mdb.min.css" />
         <!-- Regular MDB theme -->
         <!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
@@ -115,7 +115,7 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link disabled"
-                                    href="/px2/competitions.html"
+                                    href="#"
                                     tabindex="-1"
                                     aria-disabled="true"
                                     >比赛（不可用）</a
@@ -124,12 +124,13 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link disabled"
-                                    href="/px2/teams.html"
+                                    href="#"
                                     tabindex="-1"
                                     aria-disabled="true"
                                     >团队（不可用）</a
                                 >
                             </li>
+                            
                             <li class="nav-item dropdown">
                                 <a
                                     class="nav-link dropdown-toggle"
@@ -147,92 +148,42 @@
                                     aria-labelledby="navbarDropdown"
                                     >
                                     <a class="dropdown-item" href="/px2/blogcenter.html">博客中心</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
-                                    OJ官方博客</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
-                                    >我要登记</a
-                                >
-                            </li>
-                        </ul>
-                        </li>
-                        </ul>
-                        <!-- Notification dropdown -->
-                        <li class="nav-item">
-                            <div class="form-check form-switch">
-                                <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="flexSwitchCheckChecked"
-                                checked=""
-                                onclick="switchdarkmode()"
-                                />
-                                <label class="form-check-label" for="flexSwitchCheckChecked"
-                                    ><font color="black">Dark Mode!</font></label
-                                >
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            
-                            <a
-                                class="nav-link dropdown-toggle hidden-arrow"
-                                href="#"
-                                id="navbarDropdownMenuLink"
-                                role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
-                                >
-                                <i class="fas fa-bell"></i>
-                                <span
-                                    class="badge rounded-pill badge-notification bg-danger"
-                                    >3</span
-                                >
-                            </a>
-                            
-                            <ul
-                                class="dropdown-menu dropdown-menu-end"
-                                aria-labelledby="navbarDropdownMenuLink"
-                                >
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
+                                            OJ官方博客</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
+                                            >我要登记</a
+                                        >
+                                    </li>
+                                </ul>
                                 
-                                <li><a class="dropdown-item" href="#">来自开发组的一封信</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="#">来自管理组的一封信</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >欢迎加入Pixal OJ 大家庭！</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- Notification dropdown -->
-                        <!-- Left links -->
-                        <!-- Search form -->
-                        <form class="d-flex input-group w-auto">
-                            <input
-                            type="search"
-                            class="form-control"
-                            placeholder="查找什么..."
-                            aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-primary"
-                                type="button"
-                                data-mdb-ripple-color="dark"
-                                >
-                                搜索
-                            </button>
-                        </form>
+                            </li>
+                            <!-- Left links -->
+                            
                     </div>
-                    <!-- Collapsible wrapper -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                        id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+                          alt="" loading="lazy" />
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/px2/admin.html#dash">公开后台</a></li>
+                        <li><a class="dropdown-item" href="#">设置</a></li>
+                        <li><a class="dropdown-item" href="#">退出</a></li>
+                      </ul>
+                    </li>
+                    </ul>
                 </div>
+                <!-- Collapsible wrapper -->
                 <!-- Container wrapper -->
+                
             </nav>
             <!-- Navbar -->
             
@@ -246,13 +197,129 @@
             
             <!-- Section: Components -->
             <div id="intro" class="p-5 text-center bg-grey">
-                <h1><strong>Temp</strong></h1>
-                <p>Lorem epsum</p>
+                <h1><strong>L1000 超级玛丽游戏</strong></h1>
+                <p><a  href="https://www.luogu.com.cn/problem/P1000#submit"><button type="button" class="btn btn-primary btn-rounded">提交答案</button></a></p>
             </div>
         </header>
         <main class="my-5">
             <div class="container">
+                <section>
 
+                    <!--Grid column-->
+                
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                      <!-- Accordion wrapper -->
+                      <div class="accordion" id="accordionExample">
+                        <!-- Single collapse -->
+                        <div id="headingOne">
+                          <h2>
+                            <button
+                              class="btn btn-link btn-block text-start ps-3"
+                              type="button"
+                              data-mdb-toggle="collapse"
+                              data-mdb-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              题目描述
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div
+                          id="collapseOne"
+                          class="collapse show ps-3"
+                          aria-labelledby="headingOne"
+                          data-mdb-parent="#accordionExample"
+                        >
+                        超级玛丽是一个非常经典的游戏。请你用字符画的形式输出超级玛丽中的一个场景。
+                        <br>
+                        <textarea rows="22" cols="110" disabled>
+                                        ********
+                                       ************
+                                       ####....#.
+                                     #..###.....##....
+                                     ###.......######              ###            ###
+                                        ...........               #...#          #...#
+                                       ##*#######                 #.#.#          #.#.#
+                                    ####*******######             #.#.#          #.#.#
+                                   ...#***.****.*###....          #...#          #...#
+                                   ....**********##.....           ###            ###
+                                   ....****    *****....
+                                     ####        ####
+                                   ######        ######
+                        ##############################################################
+                        #...#......#.##...#......#.##...#......#.##------------------#
+                        ###########################################------------------#
+                        #..#....#....##..#....#....##..#....#....#####################
+                        ##########################################    #----------#
+                        #.....#......##.....#......##.....#......#    #----------#
+                        ##########################################    #----------#
+                        #.#..#....#..##.#..#....#..##.#..#....#..#    #----------#
+                        ##########################################    ############
+                        </textarea>
+                        </div>
+                        <!-- Single collapse -->
+
+                        <!-- Single collapse -->
+                        <div id="headingTwo">
+                          <h2>
+                            <button
+                              class="btn btn-link btn-block text-start ps-3 collapsed"
+                              type="button"
+                              data-mdb-toggle="collapse"
+                              data-mdb-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              输入格式
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div
+                          id="collapseTwo"
+                          class="collapse ps-3"
+                          aria-labelledby="headingTwo"
+                          data-mdb-parent="#accordionExample"
+                        >
+                        无
+                        </div>
+                        <!-- Single collapse -->
+
+                        <!-- Single collapse -->
+                        <div id="headingThree">
+                          <h2>
+                            <button
+                              class="btn btn-link btn-block text-start ps-3 collapsed"
+                              type="button"
+                              data-mdb-toggle="collapse"
+                              data-mdb-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                            >
+                              输出格式
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div
+                          id="collapseThree"
+                          class="collapse ps-3"
+                          aria-labelledby="headingThree"
+                          data-mdb-parent="#accordionExample"
+                        >
+                          如描述
+                        </div>
+                        <!-- Single collapse -->
+                      </div>
+                      <!-- Accordion wrapper -->
+                    <!--Grid column-->
+                  <!--Grid row-->
+                </section>
+                <!--Section: Collapse-->
             </div>
             
             
@@ -270,7 +337,7 @@
                         <h5 class="text-uppercase">Pixal Online Judge</h5>
                         
                         <p>
-                        Material化的小众OJ
+                        公开的小众OJ
                         </p>
                     </div>
                     <!--Grid column-->
@@ -281,7 +348,7 @@
                         
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white">题库</a>
+                                <a href="\px2\problems.html" class="text-white">题库</a>
                             </li>
                             <li>
                                 <a href="#!" class="text-white">团队</a>
@@ -329,7 +396,7 @@
                   color: rgba(255, 255, 255, 0.6);
                 "
                 >
-                © 2021 HEXAGON. Powered by MDB.
+                © 2021 HEXAGON.
             </div>
             <!-- Copyright -->
         </footer>
@@ -338,10 +405,5 @@
         <!-- MDB -->
         <script type="text/javascript" src="js/mdb.min.js"></script>
         <!-- Custom scripts -->
-        <script type="text/javascript">
-            function switchdarkmode() {
-                <link rel="stylesheet" href="css/mdb.min.css" />
-            }
-        </script>
     </body>
 </html>
