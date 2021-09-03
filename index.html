@@ -21,11 +21,10 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         />
         <!-- Dark MDB theme -->
-        <link rel="stylesheet" href="css/mdb.min.css" />
+        <link rel="stylesheet" href="css/mdb.min.css" title="1"/>
+        <link rel="alternate stylesheet" href="css/mdb.dark.min.css" type="text/css" title="2"/>
         <!-- Regular MDB theme -->
-        <!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
         <link rel="stylesheet" href="css/style.css" />
-        
     </head>
     <body>
         <header>
@@ -69,6 +68,15 @@
                         class="collapse navbar-collapse"
                         id="navbarSupportedContent"
                         >
+                        <script type="text/javascript">
+                            function changeStyle(t) {
+                                $('link[title]').each(function() {
+                                    this.disabled = true;
+                                    this.disabled = this.title != t;
+                                });
+                                return false;
+                            }
+                        </script>
                         <!-- Left links -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
@@ -159,7 +167,8 @@
                                         >
                                     </li>
                                 </ul>
-                                
+                                <a href="#" onclick="changeStyle(2)">Switch</a>
+                                <a href="#" onclick="changeStyle(1)">Switchl</a>
                             </li>
                             <!-- Left links -->
                             
@@ -558,14 +567,13 @@
                     </div>
                 </div>
                 
-                
                 </button>
                 <!--Grid column-->
                 <div class="col-lg-6 col-md-12 mb-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <p class="card-text text-end">
-                            PixalOJ v1.0.6
+                            PixalOJ v1.1.0 Beta
                             </p>
                             
                             </a>
@@ -582,6 +590,13 @@
         <script type="text/javascript" src="js/mdb.min.js"></script>
         <!-- Custom scripts -->
         <script type="text/javascript">
+            function changeStyle(t) {
+                $('link[title]').each(function() {
+                    this.disabled = true;
+                    this.disabled = this.title != t;
+                });
+                return false;
+            }
         </script>
     </body>
 </html>
