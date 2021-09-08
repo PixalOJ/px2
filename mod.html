@@ -21,14 +21,55 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
         />
         <!-- Dark MDB theme -->
-        <link rel="stylesheet" href="css/mdb.min.css" />
+        <script type="text/javascript">
+        function setStyle(title) {
+
+          //预定义变量
+          var i, links;
+
+          //用DOM方法获得所有的link元素
+          links = document.getElementsByTagName("link");
+          
+          for(i=0; links[i]; i++) {
+
+            //判断此link元素的rel属性中是否有style关键字
+            //即此link元素是否为样式表link
+            //同时判断此link元素是否含有title属性
+            if(links[i].getAttribute("rel").indexOf("style") != -1
+          && links[i].getAttribute("title")) {
+
+              //先不管三七二十一把它设为disabled
+              links[i].disabled = true;
+
+              //再判断它的title中是否有我们指定的关键字
+              if(links[i].getAttribute("title").indexOf(title) != -1)
+
+                //如果有则将其激活
+                links[i].disabled = false;
+            }
+          }
+        }
+        </script>
+
+         
+
+        <link rel="stylesheet" type="text/css"
+         title="主题A" href="css/mdb.min.css" />
+        <link rel="alternate stylesheet" type="text/css"
+         title="主题B" href="css/mdb.dark.min.css" />
         <!-- Regular MDB theme -->
         <link rel="stylesheet" href="css/style.css" />
-        
-        
-        
     </head>
     <body>
+        <script type="text/javascript">
+            function changeStyle(t) {
+                $('link[title]').each(function() {
+                    this.disabled = true;
+                    this.disabled = this.title != t;
+                });
+                return false;
+            }
+        </script>
         <header>
             <!-- Intro settings -->
             <style>
@@ -45,7 +86,7 @@
             </style>
             
             
-            <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <!-- Container wrapper -->
                 <div class="container-fluid">
                     <!-- Navbar brand -->
@@ -113,22 +154,21 @@
                             </li>
                             <li class="nav-item">
                                 <a
-                                    class="nav-link disabled"
-                                    href="/px2/competitions.html"
-                                    tabindex="-1"
-                                    aria-disabled="true"
-                                    >比赛（不可用）</a
+                                    class="nav-link"
+                                    href="/px2/competition.html"
+                                    >比赛</a
                                 >
                             </li>
                             <li class="nav-item">
                                 <a
                                     class="nav-link disabled"
-                                    href="/px2/teams.html"
+                                    href="#"
                                     tabindex="-1"
                                     aria-disabled="true"
                                     >团队（不可用）</a
                                 >
                             </li>
+                            
                             <li class="nav-item dropdown">
                                 <a
                                     class="nav-link dropdown-toggle"
@@ -146,43 +186,48 @@
                                     aria-labelledby="navbarDropdown"
                                     >
                                     <a class="dropdown-item" href="/px2/blogcenter.html">博客中心</a>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
+                                            OJ官方博客</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
+                                            >我要登记</a
+                                        >
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
-                                    OJ官方博客</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
-                                    >我要登记</a
-                                >
-                            </li>
-                        </ul>
-                        </li>
-                        </ul>
-                        <!-- Left links -->
-                        <!-- Search form -->
-                        <form class="d-flex input-group w-auto">
-                            <input
-                            type="search"
-                            class="form-control"
-                            placeholder="查找什么..."
-                            aria-label="Search"
-                            />
-                            <button
-                                class="btn btn-outline-primary"
-                                type="button"
-                                data-mdb-ripple-color="dark"
-                                >
-                                搜索
-                            </button>
-                        </form>
+                            <!-- Left links -->
+                            
+                            
                     </div>
-                    <!-- Collapsible wrapper -->
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <a href="#" onclick="setStyle('主题A')"><button type="button" class="btn btn-light btn-rounded">
+                            Light
+                        </button></a>
+                        <a href="#" onclick="setStyle('主题B')"><button type="button" class="btn btn-dark btn-rounded">
+                            Dark
+                        </button></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+                                alt="" loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/px2/admin.html#dash">公开后台</a></li>
+                                <li><a class="dropdown-item" href="#">设置</a></li>
+                                <li><a class="dropdown-item" href="#">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
+                <!-- Collapsible wrapper -->
                 <!-- Container wrapper -->
+                
             </nav>
             <!-- Navbar -->
             
@@ -210,78 +255,81 @@
         </main>
         
         
-        <footer class="bg-dark text-white">
+        <footer class="">
             <!-- Grid container -->
-            <div class="container p-4">
+            <div class="container p-2">
                 <!--Grid row-->
                 <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Pixal Online Judge</h5>
-                        
-                        <p>
-                        Material化的小众OJ
-                        </p>
-                    </div>
-                    <!--Grid column-->
                     
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">服务</h5>
+                        <h5 class="text-uppercase">状态</h5>
                         
                         <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white">题库</a>
+                                <a href="#!" class="text">服务状态</a>
                             </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">支持</h5>
+                        
+                        <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white">团队</a>
+                                <a href="/support/" class="text">帮助</a>
                             </li>
+                        </ul>
+                    </div>
+        
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        
+                        
+                        <ul class="list-unstyled">
                             <li>
-                                <a href="#!" class="text-white">博客</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white">巴蜀文件云</a>
+                                Supported by
+                                <a href="https://apple.com" class="text-light"><button type="button" class="btn btn-dark btn-floating btn-lg">
+                                <i class="fab fa-apple"></i></a>
                             </li>
                         </ul>
                     </div>
                     <!--Grid column-->
                     
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">友情链接</h5>
-                        
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="https://www.luogu.com.cn" class="text-white">洛谷</a>
-                            </li>
-                            <li>
-                                <a href="https://oj.bashu.com.cn" class="text-white">Bashu Online Judge</a>
-                            </li>
-                            <li>
-                                <a href="https://oj.bashu.com.cn/pub" class="text-white">Bashu Online Judge(pub)</a>
-                            </li>
-                            <li>
-                                <a href="https://hydro.ac" class="text-white">Hydro</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
                 </div>
                 <!--Grid row-->
             </div>
             <!-- Grid container -->
             
             <!-- Copyright -->
-            <div
-                class="text-center p-3"
-                style="
-                  background-color: rgba(0, 0, 0, 0.2);
-                  color: rgba(255, 255, 255, 0.6);
-                "
-                >
-                © 2021 HEXAGON. Powered by MDB.
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="card-text">
+                            © 2021 PixalOJ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                </button>
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="card-text text-end">
+                            PixalOJ
+                            </p>
+                            
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
             </div>
-            <!-- Copyright -->
+            <!--Grid row-->
         </footer>
         <!-- End your project here-->
         
@@ -289,9 +337,6 @@
         <script type="text/javascript" src="js/mdb.min.js"></script>
         <!-- Custom scripts -->
         <script type="text/javascript">
-            function switchdarkmode() {
-                <link rel="stylesheet" href="css/mdb.min.css" />
-            }
         </script>
     </body>
 </html>
