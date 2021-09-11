@@ -154,7 +154,7 @@ document.writeln("                            </li>");
 document.writeln("                            <li class=\'nav-item\'>");
 document.writeln("                                <a");
 document.writeln("                                    class=\'nav-link\'");
-document.writeln("                                    href=\'/px2/competition.html\'");
+document.writeln("                                    href=\'/px2/competitiona.html\'");
 document.writeln("                                    >比赛</a");
 document.writeln("                                >");
 document.writeln("                            </li>");

@@ -69,7 +69,7 @@ document.writeln("                <div class=\'col-lg-6 col-md-12 mb-4\'>");
 document.writeln("                    <div class=\'card mb-4\'>");
 document.writeln("                        <div class=\'card-body\'>");
 document.writeln("                            <p class=\'card-text text-end\'>");
-document.writeln("                            PixalOJ Version 1.2.15 Beta");
+document.writeln("                            PixalOJ Version 1.2.16 Beta");
 document.writeln("                            </p>");
 document.writeln("                            ");
 document.writeln("                            </a>");
