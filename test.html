@@ -21,41 +21,41 @@
         />
         <!-- Dark MDB theme -->
         <script type="text/javascript">
-        function setStyle(title) {
-
-          //预定义变量
-          var i, links;
-
-          //用DOM方法获得所有的link元素
-          links = document.getElementsByTagName("link");
-          
-          for(i=0; links[i]; i++) {
-
-            //判断此link元素的rel属性中是否有style关键字
-            //即此link元素是否为样式表link
-            //同时判断此link元素是否含有title属性
-            if(links[i].getAttribute("rel").indexOf("style") != -1
-          && links[i].getAttribute("title")) {
-
-              //先不管三七二十一把它设为disabled
-              links[i].disabled = true;
-
-              //再判断它的title中是否有我们指定的关键字
-              if(links[i].getAttribute("title").indexOf(title) != -1)
-
-                //如果有则将其激活
-                links[i].disabled = false;
+            function setStyle(title) {
+                
+                //预定义变量
+                var i, links;
+                
+                //用DOM方法获得所有的link元素
+                links = document.getElementsByTagName("link");
+                
+                for(i=0; links[i]; i++) {
+                    
+                    //判断此link元素的rel属性中是否有style关键字
+                    //即此link元素是否为样式表link
+                    //同时判断此link元素是否含有title属性
+                    if(links[i].getAttribute("rel").indexOf("style") != -1
+                       && links[i].getAttribute("title")) {
+                        
+                        //先不管三七二十一把它设为disabled
+                        links[i].disabled = true;
+                        
+                        //再判断它的title中是否有我们指定的关键字
+                        if(links[i].getAttribute("title").indexOf(title) != -1)
+                        
+                        //如果有则将其激活
+                        links[i].disabled = false;
+                    }
+                }
             }
-          }
-        }
         </script>
-
-         
-
+        
+        
+        
         <link rel="stylesheet" type="text/css"
-         title="主题A" href="css/mdb.min.css" />
+        title="主题A" href="css/mdb.min.css" />
         <link rel="alternate stylesheet" type="text/css"
-         title="主题B" href="css/mdb.dark.min.css" />
+        title="主题B" href="css/mdb.dark.min.css" />
         <!-- Regular MDB theme -->
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -85,7 +85,7 @@
             </style>
             
             
-            <iframe src="/px2/head.html" width=”100%″ height=”30″ frameborder=”no” border=”0″ marginwidth=”0″ marginheight=”0″ scrolling=”no” allowtransparency=”yes”></iframe>
+            <iframe src="/px2/head.html" width=”100%″ height="auto" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
             
             
             
@@ -103,7 +103,7 @@
         </header>
         <main class="my-5">
             <div class="container">
-
+                
             </div>
             
             
@@ -136,14 +136,14 @@
                             </li>
                         </ul>
                     </div>
-        
+                    
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                         <h5 class="text-uppercase">备用网址</h5>
                         <ul class="list-unstyled">
                             <li>
                                 <a href="https://px2.pages.dev">Cloudflare</a>
-                           </li>
+                            </li>
                         </ul>
                     </div>
                     <!--Grid column-->
