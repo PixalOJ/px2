@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <!-- MDB icon -->
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        />
+        <!-- Google Fonts Roboto -->
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+        <!-- Dark MDB theme -->
+        <script type="text/javascript">
+        function setStyle(title) {
+
+          //预定义变量
+          var i, links;
+
+          //用DOM方法获得所有的link元素
+          links = document.getElementsByTagName("link");
+          
+          for(i=0; links[i]; i++) {
+
+            //判断此link元素的rel属性中是否有style关键字
+            //即此link元素是否为样式表link
+            //同时判断此link元素是否含有title属性
+            if(links[i].getAttribute("rel").indexOf("style") != -1
+          && links[i].getAttribute("title")) {
+
+              //先不管三七二十一把它设为disabled
+              links[i].disabled = true;
+
+              //再判断它的title中是否有我们指定的关键字
+              if(links[i].getAttribute("title").indexOf(title) != -1)
+
+                //如果有则将其激活
+                links[i].disabled = false;
+            }
+          }
+        }
+        </script>
+
+         
+
+        <link rel="stylesheet" type="text/css"
+         title="主题A" href="css/mdb.min.css" />
+        <link rel="alternate stylesheet" type="text/css"
+         title="主题B" href="css/mdb.dark.min.css" />
+        <!-- Regular MDB theme -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            function changeStyle(t) {
+                $('link[title]').each(function() {
+                    this.disabled = true;
+                    this.disabled = this.title != t;
+                });
+                return false;
+            }
+        </script>
+        <header>
+            <!-- Intro settings -->
+            <style>
+                #intro {
+                    /* Margin to fix overlapping fixed navbar */
+                    margin-top: 58px;
+                }
+                @media (max-width: 991px) {
+                    #intro {
+                        /* Margin to fix overlapping fixed navbar */
+                        margin-top: 45px;
+                    }
+                }
+            </style>
+            
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand" href="/index.html">PixalOJ</a>
+                    
+                    <!-- Toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                        <span class="navbar-toggler-icon"></span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <!-- Collapsible wrapper -->
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                        >
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/index.html"
+                                    >首页</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/px2/problems.html">题库</a>
+                            </li>
+                            <!-- Navbar dropdown -->
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"
+                                    >
+                                    社区
+                                </a>
+                                <!-- Dropdown menu -->
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                    >
+                                    <li><a class="dropdown-item" href="https://github.com/PixalOJ/px2/discussions">讨论</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">题解</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            >反馈/建议</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="/px2/competition.html"
+                                    >比赛</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link disabled"
+                                    href="#"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >团队（不可用）</a
+                                >
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"
+                                    >
+                                    博客
+                                </a>
+                                <!-- Dropdown menu -->
+                                <ul
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                    >
+                                    <a class="dropdown-item" href="/px2/blogcenter.html">博客中心</a>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/PixalBlog">Pixal
+                                            OJ官方博客</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://pixaloj.github.io/px2/blogsign.html"
+                                            >我要登记</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Left links -->
+                            
+                            
+                    </div>
+                    <ul class="navbar-nav ms-auto d-flex flex-row">
+                        <a href="#" onclick="setStyle('主题A')"><button type="button" class="btn btn-light btn-rounded">
+                            Light
+                        </button></a>
+                        <a href="#" onclick="setStyle('主题B')"><button type="button" class="btn btn-dark btn-rounded">
+                            Dark
+                        </button></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                                id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+                                alt="" loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/px2/admin.html#dash">公开后台</a></li>
+                                <li><a class="dropdown-item" href="#">设置</a></li>
+                                <li><a class="dropdown-item" href="#">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Collapsible wrapper -->
+                <!-- Container wrapper -->
+                
+            </nav>
+            <!-- Navbar -->
+        </header>
+        
+        
+
+        <!-- End your project here-->
+        
+        <!-- MDB -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <!-- Custom scripts -->
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
