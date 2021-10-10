@@ -89,7 +89,7 @@ document.writeln("            <nav class=\'navbar navbar-expand-lg navbar-light 
 document.writeln("                <!-- Container wrapper -->");
 document.writeln("                <div class=\'container-fluid\'>");
 document.writeln("                    <!-- Navbar brand -->");
-document.writeln("                    <a class=\'navbar-brand\' href=\'/index.html\'>PixalOJ</a>");
+document.writeln("                    <a class=\'navbar-brand\' href=\'/\'>PixalOP</a>");
 document.writeln("                    ");
 document.writeln("                    <!-- Toggle button -->");
 document.writeln("                    <button");
