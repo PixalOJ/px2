@@ -118,7 +118,7 @@ document.writeln("                                    >首页</a");
 document.writeln("                                >");
 document.writeln("                            </li>");
 document.writeln("                            <li class=\'nav-item\'>");
-document.writeln("                                <a class=\'nav-link\' href=\'/px2/problems.html\'>题库</a>");
+document.writeln("                                <a class=\'nav-link\' href=\'problems.html\'>题目列表</a>");
 document.writeln("                            </li>");
 document.writeln("                            <!-- Navbar dropdown -->");
 document.writeln("                            <li class=\'nav-item dropdown\'>");
